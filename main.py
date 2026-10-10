@@ -1,3 +1,5 @@
+results = []
+
 while True:
 
     print("""STUDY PROGRESS TRACKER
@@ -9,6 +11,18 @@ while True:
     input_choice = input("Enter your choice (1-4): ")
     if input_choice == "1":
         print("Add a new result.")
+        subject = input("Enter the subject name: ")
+        topic = input("Enter the topic: ")
+        score = input("Enter the score: ")
+        date = input("Enter the date (YY-MM-DD): ")
+        print(f"Result added: {subject} - {topic}, {score}%, {date}")
+        result = {
+            "subject": subject,
+            "topic": topic,
+            "score": score,
+            "date": date
+        }
+        results.append(result)
     elif input_choice == "2":
         print("Displaying all results...")
     elif input_choice == "3":
